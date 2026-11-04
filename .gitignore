@@ -1,0 +1,20 @@
+__pycache__/
+*.py[cod]
+.venv/
+.env
+vendor/
+data/raw/
+tensorboard/
+.DS_Store
+
+# Git file-size limits: model checkpoints (>100MB) can be hosted externally or via Git LFS
+*.pth
+
+# Keep checkpoint folders tracked
+!English/checkpoints/.gitkeep
+!Telugu/checkpoints/.gitkeep
+
+# Preserve required assignment deliverables
+!Results/**/*.wav
+!Results/**/*.png
+!data/manifests/*.csv

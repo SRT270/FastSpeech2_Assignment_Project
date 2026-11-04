@@ -1,0 +1,48 @@
+language: English
+dataset: Svarah
+data:
+  manifest_train: data/manifests/english_train.csv
+  manifest_val: data/manifests/english_val.csv
+  raw_path: data/raw/English
+  preprocessed_path: data/preprocessed/English
+  sample_rate: 22050
+  min_duration: 2
+  max_duration: 20
+text:
+  frontend: english_g2p_en
+  cleaners:
+  - english_cleaners
+  language_code: en
+  symbol_inventory: upstream_arpabet
+alignment:
+  tool: Montreal Forced Aligner
+  required: true
+  textgrid_tier: phones
+  acoustic_model: english_mfa_acoustic_model
+  dictionary: english_us_arpa
+model:
+  encoder_layers: 4
+  encoder_heads: 2
+  encoder_hidden: 256
+  decoder_layers: 6
+  decoder_heads: 2
+  decoder_hidden: 256
+  n_mel_channels: 80
+  sampling_rate: 22050
+  hop_length: 256
+  filter_length: 1024
+  win_length: 1024
+  pitch_level: phoneme_level
+  energy_level: phoneme_level
+  multi_speaker: false
+training:
+  batch_size: 8
+  total_steps: 100000
+  warmup_steps: 4000
+  save_every: 5000
+  validate_every: 1000
+  seed: 42
+paths:
+  checkpoint_dir: checkpoints
+  results_dir: Results/English
+  vendor_dir: vendor/FastSpeech2
