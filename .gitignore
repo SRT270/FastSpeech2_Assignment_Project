@@ -8,7 +8,7 @@ tensorboard/
 .DS_Store
 
 # Git file-size limits: model checkpoints (>100MB) can be hosted externally or via Git LFS
-*.pth
+# *.pth
 
 # Keep checkpoint folders tracked
 !English/checkpoints/.gitkeep
