@@ -17,6 +17,11 @@ from reportlab.platypus import (
     KeepTogether,
     HRFlowable,
 )
+# Added imports for Unicode font support
+from reportlab.pdfbase import pdfmetrics
+from reportlab.pdfbase.ttfonts import TTFont
+# Register a font that includes Telugu glyphs (Nirmala UI is available on Windows)
+pdfmetrics.registerFont(TTFont('NirmalaUI', r'C:\\Windows\\Fonts\\NirmalaUI.ttf'))
 
 def build_pdf(output_path="Report/Technical_Report.pdf"):
     doc = SimpleDocTemplate(
@@ -73,7 +78,7 @@ def build_pdf(output_path="Report/Technical_Report.pdf"):
     body_style = ParagraphStyle(
         "BodyDark",
         parent=styles["Normal"],
-        fontName="Helvetica",
+        fontName="NirmalaUI",
         fontSize=9,
         leading=13,
         textColor=colors.HexColor("#2d3748"),

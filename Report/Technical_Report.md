@@ -185,4 +185,4 @@ python Telugu/inference.py --config Telugu/config.yaml --all-assignment-tests
 1. Ren, Y., Hu, C., Tan, X., Qin, T., Zhao, S., Zhao, Z., & Liu, T. Y. (2020). *FastSpeech 2: Fast and High-Quality End-to-End Text to Speech*. arXiv:2006.04558.
 2. FastSpeech 2 Reference Repository: https://github.com/ming024/FastSpeech2
 3. AI4Bharat Svarah Corpus: https://huggingface.co/datasets/ai4bharat/Svarah
-4. IndicTTS Database: https://www.iitm.ac.in/donlab/indictts/
+4. IndicTTS Database: https://huggingface.co/datasets/SPRINGLab/IndicTTS_Telugu
