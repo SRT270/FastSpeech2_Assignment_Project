@@ -2,7 +2,7 @@
 
 Complete implementation, training, and evaluation of **FastSpeech 2** for **English** (AI4Bharat Svarah) and **Telugu** (IndicTTS Telugu) Text-to-Speech synthesis.
 
-**GitHub repository:** https://github.com/SRT270/FastSpeech2-Assignment
+**GitHub repository:** https://github.com/SRT270/FastSpeech2_Assignment_Project
 
 ---
 
